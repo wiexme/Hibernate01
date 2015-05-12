@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/04/2015 09:48:40 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="modelo.entidad.Cliente" optimistic-lock="version" schema="PRUEBA2" table="CLIENTE">
+    <id name="idcliente" type="int">
+      <column name="IDCLIENTE" precision="10" scale="0"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombres" type="string">
+      <column length="20" name="NOMBRES" not-null="true"/>
+    </property>
+    <property name="apellidos" type="string">
+      <column length="35" name="APELLIDOS" not-null="true"/>
+    </property>
+    <property name="dni" type="int">
+      <column name="DNI" not-null="true" precision="8" scale="0"/>
+    </property>
+    <property name="sexo" type="string">
+      <column length="1" name="SEXO" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
